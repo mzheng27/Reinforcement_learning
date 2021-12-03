@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from torchvision.models import efficientnet_b7
+from torchvision.models import efficientnet_b0
 # from efficientnet_pytorch import EfficientNet
 
 
