@@ -1,6 +1,7 @@
 import torch
 import torch.nn.functional as F
-from torchvision.models import efficientnet
+# from torchvision.models import efficientnet
+from efficientnet_pytorch import EfficientNet
 
 
 def spatial_argmax(logit):
@@ -32,7 +33,9 @@ class Planner(torch.nn.Module):
 #       layers.append(torch.nn.ReLU())
       
 #       layers.append(torch.nn.Conv2d(64,1,1,1))
-      layers = list(efficientnet(pretrained=False).children())[:-2]
+      model = EfficientNet.from_name('efficientnet-b7')
+
+      layers = list(model)
     
 
       
