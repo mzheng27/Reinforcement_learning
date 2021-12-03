@@ -34,7 +34,7 @@ class Planner(torch.nn.Module):
       
 #       layers.append(torch.nn.Conv2d(64,1,1,1))
 
-      layers = list(efficientnet_b7(pretrained=True).features.children()
+      layers = list(efficientnet_b7(pretrained=True).features.children())
     
 
       
