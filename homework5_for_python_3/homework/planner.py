@@ -23,16 +23,16 @@ class Planner(torch.nn.Module):
       layers = []
 
       
-      layers.append(torch.nn.Conv2d(3,16,5,2,2))
-      layers.append(torch.nn.ReLU())
-      layers.append(torch.nn.Conv2d(16,32,5,2,2))
-      layers.append(torch.nn.ReLU())
-      layers.append(torch.nn.Conv2d(32,32,5,2,2))
-      layers.append(torch.nn.ReLU())
-      layers.append(torch.nn.Conv2d(32,64,5,2,2))
-      layers.append(torch.nn.ReLU())
+#       layers.append(torch.nn.Conv2d(3,16,5,2,2))
+#       layers.append(torch.nn.ReLU())
+#       layers.append(torch.nn.Conv2d(16,32,5,2,2))
+#       layers.append(torch.nn.ReLU())
+#       layers.append(torch.nn.Conv2d(32,32,5,2,2))
+#       layers.append(torch.nn.ReLU())
+#       layers.append(torch.nn.Conv2d(32,64,5,2,2))
+#       layers.append(torch.nn.ReLU())
       
-      layers.append(torch.nn.Conv2d(64,1,1,1))
+#       layers.append(torch.nn.Conv2d(64,1,1,1))
       layers = list(resnet18(pretrained=False).children())[:-2]
     
 
