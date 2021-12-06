@@ -25,6 +25,7 @@ def train(args):
         model.load_state_dict(torch.load(path.join(path.dirname(path.abspath(__file__)), 'planner.th')))
 
     loss = torch.nn.L1Loss()
+    optimizer =torch.optim.SGD(model.parameters(), lr=args.learning_rate)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
 #    scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer,1e-4,1e-1)
     
